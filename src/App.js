@@ -1,11 +1,17 @@
 import React from "react";
-import './App.css';
-import 'bootstrap';
+import "./App.css";
+import Search from "./Search";
+import "bootstrap";
 
 function App() {
   return (
     <div className="App">
-     test
+      <div className="container container-box">
+        <Search />
+        <footer>
+          Coded by Ilenia
+        </footer>
+      </div>
     </div>
   );
 }
