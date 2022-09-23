@@ -10,7 +10,7 @@ function App() {
         <h1 className="mb-5">Dictionary</h1>
         <Search />
         <footer>
-          <a href="https://github.com/ilenia-n/dictionary-react-app"> Open-source code</a> by Ilenia
+          <a href="https://github.com/ilenia-n/dictionary-react-app" target="_blank" rel="noopener noreferrer"> Open-source code</a> by Ilenia
         </footer>
       </div>
     </div>
