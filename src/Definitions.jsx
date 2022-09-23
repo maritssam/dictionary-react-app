@@ -1,12 +1,20 @@
 import React from "react";
 
 function Definitions(props) {
-  console.log(props.definitions)
+  console.log(props.definitions[0])
   return (
     <div className="Definitions">
-     <h3>{props.definitions.partOfSpeech}</h3>
-     {/* <p>{props.definitions[0].definition}</p>
-     <p>{props.definitions[0].example}</p> */}
+      <h3>{props.definitions.partOfSpeech}</h3>
+      {props.definitions.definitions.map(function (definition, index) {
+        return (
+          <div key={index}>
+            <p>{definition.definition}
+              <br />
+              <em>{definition.example}</em>
+            </p>
+          </div>
+        )
+      })}
     </div>
   )
 }
