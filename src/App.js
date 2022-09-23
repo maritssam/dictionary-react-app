@@ -9,7 +9,7 @@ function App() {
       <div className="container container-box">
         <Search />
         <footer>
-          Coded by Ilenia
+          <a href="https://github.com/ilenia-n/dictionary-react-app"> Open-source code</a> by Ilenia
         </footer>
       </div>
     </div>
