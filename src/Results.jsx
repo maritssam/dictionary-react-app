@@ -1,17 +1,18 @@
 import React from "react";
-import Definitions from "./Definitions";
+import Meanings from "./Meanings";
 
 function Results(props) {
 
   if (props.response) {
+
     let meaning = props.response.meanings;
 
     return (
       <div className="Results">
         <h2>{props.response.word}</h2>
-        {meaning.map(function (definitions, index) {
+        {meaning.map(function (meanings, index) {
           return <div key={index}>
-            <Definitions definitions={definitions} />
+            <Meanings meanings={meanings} />
           </div>
         })
         }
