@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 
 function Phonetics(props) {
-  const [audio, setAudio] = useState(null);
+  let [audio, setAudio] = useState(false);
 
-  
   function handleAudio(event) {
     event.preventDefault();
-    setAudio(props.audio);
-    let sound = new Audio(audio);
-    sound.play()
+    setAudio(true);
+    audio = new Audio(props.audio);
+    audio.play()
   }
 
   return (
@@ -18,6 +17,7 @@ function Phonetics(props) {
       <div>{props.text}</div>
     </div>
   )
+
 }
 
 export default Phonetics;
