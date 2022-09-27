@@ -7,16 +7,20 @@ function Phonetics(props) {
   function handleAudio(event) {
     event.preventDefault();
     setAudio(true);
-    audio = new Audio(props.audio);
+    audio = new Audio(props.phonetics.audio);
     audio.play()
   }
 
+
+if (props.phonetics){
   return (
     <div className="Phonetics">
-      <a href="/" onClick={handleAudio}><Icon audio={props.audio}/></a>
-      <div>{props.text}</div>
+      <a href="/" onClick={handleAudio}><Icon audio={props.phonetics.audio}/></a>
+      <div>{props.phonetics.text}</div>
     </div>
-  )
+  )} else{
+    return null
+  }
 
 }
 

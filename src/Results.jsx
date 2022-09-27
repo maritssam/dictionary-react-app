@@ -12,7 +12,7 @@ function Results(props) {
     return (
       <div className="Results">
         <h2>{props.response.word}</h2>
-        <Phonetics audio={props.response.phonetics[0].audio} text={props.response.phonetics[0].text} />
+        <Phonetics phonetics={props.response.phonetics[0]}/>
 
         {meaning.map(function (meanings, index) {
           return <div key={index}>
