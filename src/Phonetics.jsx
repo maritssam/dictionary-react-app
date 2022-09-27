@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 
 function Phonetics(props) {
-  const [audio, setAudio] = useState(false);
+  const [audio, setAudio] = useState(null);
 
   
   function handleAudio(event) {
     event.preventDefault();
-    setAudio(true);
-    let audio = new Audio(props.audio);
-    audio.play()
+    setAudio(props.audio);
+    let sound = new Audio(audio);
+    sound.play()
   }
 
   return (
