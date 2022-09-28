@@ -1,0 +1,8 @@
+.Phonetics .phonetics-text {
+    opacity: 0.7;
+    margin-left: 15px;
+}
+
+.Phonetics .grey-out{
+    opacity: 0.2;
+}

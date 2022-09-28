@@ -12,11 +12,12 @@ function Search() {
   function getDefinition(response) {
     console.log(response);
     setResults(response.data[0]);
+    setRejected(false)
   }
 
-  function onRejectedDefinition(response) {
-    console.log(response)
+  function onRejectedDefinition() {
     setRejected(true);
+    setResults(null)
   }
 
   function searchWord(event) {

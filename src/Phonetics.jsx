@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Icon from "./Icon";
+
+import "./Phonetics.css";
 
 function Phonetics(props) {
   let [audio, setAudio] = useState(false);
+   
 
   function handleAudio(event) {
     event.preventDefault();
@@ -12,15 +14,25 @@ function Phonetics(props) {
   }
 
 
-if (props.phonetics){
+if (props.phonetics) {
+
+  if (props.phonetics.audio) {
   return (
     <div className="Phonetics">
-      <a href="/" onClick={handleAudio}><Icon audio={props.phonetics.audio}/></a>
-      <div>{props.phonetics.text}</div>
+      <a href="/" onClick={handleAudio}><i className="fa-solid fa-volume-high"></i></a>
+      <span className="phonetics-text">{props.phonetics.text}</span>
     </div>
-  )} else{
+  )} else if (props.phonetics.text){
+    return (
+      <div className="Phonetics">
+          <i className="fa-solid fa-volume-high grey-out"></i>
+        <span className="phonetics-text">{props.phonetics.text}</span>
+      </div>
+    )
+  } else {
     return null
   }
+}
 
 }
 
