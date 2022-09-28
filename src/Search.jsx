@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Results from "./Results";
 import Rejected from "./Rejected";
+import "./Search.css";
 import axios from "axios";
 
 
@@ -33,9 +34,20 @@ function Search() {
 
   return (
     <div className="Search">
+      <h1>What word do you want to look up?</h1>
       <form onSubmit={searchWord}>
-        <input type="search" placeholder="search for a word..." onChange={captureKeyword} />
-        <input type="submit" value="Search" />
+        <div className="form-group">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-9">
+                <input className="search-box rounded" type="search" placeholder=" search for a word..." onChange={captureKeyword} />
+              </div>
+              <div className="col-3">
+                <button className="btn btn-branding shadow-sm" type="submit">Search </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
       <Results response={results} />
       <Rejected rejected={rejected} />
