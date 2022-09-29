@@ -9,10 +9,8 @@
   width: 100%;
   height: 37px;
   margin-right: 15px;
-}
-
-.Search .search-box:placeholder-shown {
-  border: 2px solid #cdd3ae;
+  padding: 15px;
+  border: solid 1px #cdd3ae;
 }
 
 .Search .btn-branding {

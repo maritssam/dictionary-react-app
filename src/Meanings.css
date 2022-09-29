@@ -1,0 +1,40 @@
+.Meanings .word-definition {
+  padding: 0 20px 0px 20px;
+}
+
+.Meanings h3{
+  color: #cdd3ae ;
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 30px;
+  padding: 20px 20px 0 20px;
+}
+
+.Meanings hr{
+  border: solid 1px #cdd3ae;
+  margin: 0px;
+}
+
+.Meanings li{
+  margin: 15px 0 0 0;
+}
+
+.Meanings ol{
+  margin-bottom: 40px;
+}
+
+.Meanings ul{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.Meanings li.synonym{
+  padding: 5px 12px;
+  border: solid 1px #cdd3ae;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 14px;
+}
+

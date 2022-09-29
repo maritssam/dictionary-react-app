@@ -11,7 +11,6 @@ function Search() {
   const [rejected, setRejected] = useState(false);
 
   function getDefinition(response) {
-    console.log(response);
     setResults(response.data[0]);
     setRejected(false)
   }
@@ -28,7 +27,6 @@ function Search() {
   }
 
   function captureKeyword(event) {
-    console.log(event.target.value)
     setKeyword(event.target.value);
   }
 
@@ -40,7 +38,7 @@ function Search() {
           <div className="container-fluid">
             <div className="row">
               <div className="col-9">
-                <input className="search-box rounded" type="search" placeholder=" search for a word..." onChange={captureKeyword} />
+                <input className="search-box rounded" type="search" placeholder="search for a word..." onChange={captureKeyword} />
               </div>
               <div className="col-3">
                 <button className="btn btn-branding shadow-sm" type="submit">Search </button>

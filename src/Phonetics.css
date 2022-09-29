@@ -1,8 +1,42 @@
-.Phonetics .phonetics-text {
-    opacity: 0.7;
-    margin-left: 15px;
+.Phonetics {
+  display: inline-block;
 }
 
-.Phonetics .grey-out{
-    opacity: 0.2;
+.Phonetics i{
+  margin: 11px 0 11px 0;
+}
+
+.Phonetics a {
+  color: #f27d6f;
+  font-size: 23px;
+  border: solid 1px white;
+  padding: 5px;
+  border-radius: 50px;
+  transition: 0.5 ease-in-out;
+}
+
+.Phonetics a:hover {
+  border: solid 1px #f27d6f;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.Phonetics .grey-out {
+  color: #f27d6f;
+  opacity: 0.4;
+  font-size: 23px;
+  margin: 7px 0 7px 0;
+  border: solid 1px white;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.Phonetics .grey-out:hover{
+  color: #4e4e4e;
+  opacity: 0.1;
+}
+
+.Phonetics .phonetics-text {
+  opacity: 0.7;
+  margin: 0 25px 0 15px;
 }
