@@ -20,3 +20,19 @@
   font-family: "Reem Kufi Ink", sans-serif;
   margin: 0;
 }
+
+
+@media (max-width:576px) {
+
+  .Rejected {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .Rejected img {
+    padding-right: 0px;
+    float: none;
+    margin-bottom: 30px;
+  }
+
+}
