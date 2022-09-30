@@ -13,7 +13,7 @@
   border: solid 1px #cdd3ae;
 }
 
-.Search .btn-branding {
+.Search .btn-branding, .Search .btn-branding:hover {
   background-color: #cdd3ae;
   color: white;
   font-weight: bold;
