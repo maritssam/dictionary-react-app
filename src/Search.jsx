@@ -9,6 +9,12 @@ function Search() {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
   const [rejected, setRejected] = useState(false);
+  const [photo, setPhoto] = useState(null);
+
+function showPics(response) {
+  setPhoto(response.data.photos);
+}
+
 
   function getDefinition(response) {
     setResults(response.data[0]);
@@ -24,6 +30,11 @@ function Search() {
     event.preventDefault();
     let apiURl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios(apiURl).then(getDefinition, onRejectedDefinition);
+
+    let pexelsApiKey="563492ad6f9170000100000165be361af0ee446ca672fa73859a372b";
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    let pexelsApiURL = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`
+    axios.get(pexelsApiURL, { headers: headers }).then(showPics);
   }
 
   function captureKeyword(event) {
@@ -49,7 +60,7 @@ function Search() {
           </div>
         </div>
       </form>
-      <Results response={results} />
+      <Results response={results} photo={photo}/>
       <Rejected rejected={rejected} />
     </div>
   )

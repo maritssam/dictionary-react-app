@@ -1,6 +1,7 @@
 import React from "react";
 import Meanings from "./Meanings";
 import Phonetics from "./Phonetics";
+import Photos from "./Photos";
 import "./Results.css";
 
 
@@ -13,7 +14,7 @@ function Results(props) {
 
     return (
       <div className="Results">
-        <section className="word-result shadow-sm rounded">
+        <div className="word-pic-result shadow-sm rounded">
           <h2>{props.response.word}</h2>
 
           {phonetics.map((phonetic, index) => {
@@ -23,7 +24,7 @@ function Results(props) {
               </span>
             )
           })}
-        </section>
+        </div>
 
         {meaning.map((meanings, index) => {
           return (
@@ -33,6 +34,11 @@ function Results(props) {
           )
         })
         }
+
+        <div className="word-pic-result shadow-sm rounded">
+          <Photos photo={props.photo} />
+        </div>
+
       </div>
     )
   } else {
