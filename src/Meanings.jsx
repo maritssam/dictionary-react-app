@@ -24,6 +24,8 @@ function Meanings(props) {
           })}
         </ol>
 
+        {props.meanings.synonyms.length > 0 ? <span className="similar-text">Similar:</span> : null}
+
         {props.meanings.synonyms.map((synonym, index) => {
           if (synonym) {
             return (

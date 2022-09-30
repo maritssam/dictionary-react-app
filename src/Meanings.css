@@ -31,10 +31,15 @@
 }
 
 .Meanings li.synonym{
-  padding: 5px 12px;
+  padding: 3px 10px;
   border: solid 1px #cdd3ae;
-  border-radius: 5px;
+  border-radius: 25px;
   margin: 5px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
+.Meanings .similar-text{
+  margin-right: 10px;
+  font-weight: 600;
+  color: #cdd3ae ;
+}

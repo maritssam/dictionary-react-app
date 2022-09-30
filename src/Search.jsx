@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 function Search() {
-  const [keyword, setKeyword] = useState(null);
+  const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
   const [rejected, setRejected] = useState(false);
 
@@ -30,6 +30,8 @@ function Search() {
     setKeyword(event.target.value);
   }
 
+  
+
   return (
     <div className="Search">
       <h1>What word do you want to look up?</h1>
@@ -40,7 +42,7 @@ function Search() {
               <div className="col-10">
                 <input className="form-control search-box rounded" type="search" placeholder="search for a word..." onChange={captureKeyword} />
               </div>
-              <div className="col-2">
+              <div className="col-2 p-0">
                 <button className="btn btn-branding shadow-sm" type="submit">Search </button>
               </div>
             </div>
