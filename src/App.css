@@ -11,8 +11,9 @@
 .App .container-box {
   margin: 30px auto;
   padding: 40px;
-  width: 650px;
+  width: 700px;
   background-color: white;
+  min-width: 576px;
 }
 
 .App .logo {

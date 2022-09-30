@@ -35,12 +35,12 @@ function Search() {
       <h1>What word do you want to look up?</h1>
       <form onSubmit={searchWord}>
         <div className="form-group">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
-              <div className="col-9">
-                <input className="search-box rounded" type="search" placeholder="search for a word..." onChange={captureKeyword} />
+              <div className="col-10">
+                <input className="form-control search-box rounded" type="search" placeholder="search for a word..." onChange={captureKeyword} />
               </div>
-              <div className="col-3">
+              <div className="col-2">
                 <button className="btn btn-branding shadow-sm" type="submit">Search </button>
               </div>
             </div>

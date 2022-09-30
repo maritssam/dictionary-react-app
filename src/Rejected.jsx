@@ -6,7 +6,7 @@ function Rejected(props) {
   if (props.rejected) {
     return (
       <div className="Rejected shadow-sm rounded">
-        <img src={NotFound} alt="Not Found, error 404" />
+        <img src={NotFound} className="img-fluid" alt="Not Found, error 404" title="404, page not found" />
         <h2>Oops!</h2>
         <p> We can't find the word you entered. Check for spelling and try again using the search bar above.</p>
       </div>
