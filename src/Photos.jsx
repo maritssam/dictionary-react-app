@@ -1,17 +1,18 @@
 import React from "react";
+import "./Photos.css";
 
 
 function Photos(props) {
   if (props.photo) {
     return (
-      <div className="Photos">
-        <div className="row">
+      <div className="Photos shadow-sm rounded">
+        <div className="row m-0">
 
           {props.photo.map((pic, index) => {
             return (
-              <div className="col-4" key={index}>
+              <div className="col-md-4 p-1" key={index}>
                 <a href={pic.src.original} target="_blank" rel="noopener noreferrer" title={pic.alt}>
-                  <img className="img-fluid shadow-sm rounded mb-3" src={pic.src.landscape} alt={pic.alt} />
+                  <img className="img-fluid p-1" src={pic.src.landscape} alt={pic.alt} />
                 </a>
               </div>)
           })}

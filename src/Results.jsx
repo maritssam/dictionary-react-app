@@ -14,7 +14,7 @@ function Results(props) {
 
     return (
       <div className="Results">
-        <div className="word-pic-result shadow-sm rounded">
+        <div className="word-result shadow-sm rounded">
           <h2>{props.response.word}</h2>
 
           {phonetics.map((phonetic, index) => {
@@ -35,9 +35,7 @@ function Results(props) {
         })
         }
 
-        <div className="word-pic-result shadow-sm rounded">
-          <Photos photo={props.photo} />
-        </div>
+        <Photos photo={props.photo} />
 
       </div>
     )
