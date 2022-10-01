@@ -10,9 +10,13 @@ function Search() {
   const [results, setResults] = useState(null);
   const [rejected, setRejected] = useState(false);
   const [photo, setPhoto] = useState(null);
+  const [numberOfPics, setNumbersOfPics] = useState(null)
 
   function showPics(response) {
     setPhoto(response.data.photos);
+    setNumbersOfPics(response.data.total_results);
+    console.log(response.data);
+    console.log(response.data.total_results);
   }
 
   function getDefinition(response) {
@@ -57,7 +61,7 @@ function Search() {
           </div>
         </div>
       </form>
-      <Results response={results} photo={photo} />
+      <Results response={results} photo={photo} num={numberOfPics} />
       <Rejected rejected={rejected} />
     </div>
   )

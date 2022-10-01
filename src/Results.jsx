@@ -6,7 +6,6 @@ import "./Results.css";
 
 
 function Results(props) {
-
   if (props.response) {
 
     let meaning = props.response.meanings;
@@ -35,7 +34,7 @@ function Results(props) {
         })
         }
 
-        <Photos photo={props.photo} />
+        <Photos photo={props.photo} num={props.num} />
 
       </div>
     )

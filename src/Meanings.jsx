@@ -6,7 +6,7 @@ import "./Meanings.css";
 
 
 function Meanings(props) {
-
+  console.log(props.meanings.synonyms.length)
   return (
     <div className="Meanings">
 

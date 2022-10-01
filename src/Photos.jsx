@@ -3,7 +3,8 @@ import "./Photos.css";
 
 
 function Photos(props) {
-  if (props.photo) {
+
+  if (props.num > 0) {
     return (
       <div className="Photos shadow-sm rounded">
         <div className="row m-0">
@@ -26,3 +27,6 @@ function Photos(props) {
 }
 
 export default Photos;
+
+
+
