@@ -3,7 +3,7 @@ import "./Photos.css";
 
 
 function Photos(props) {
-
+  
   if (props.num > 0) {
     return (
       <div className="Photos shadow-sm rounded">

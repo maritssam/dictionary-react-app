@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Results from "./Results";
 import Rejected from "./Rejected";
-import "./Search.css";
 import axios from "axios";
+import "./Search.css";
 
 
 function Search() {
@@ -15,8 +15,6 @@ function Search() {
   function showPics(response) {
     setPhoto(response.data.photos);
     setNumbersOfPics(response.data.total_results);
-    console.log(response.data);
-    console.log(response.data.total_results);
   }
 
   function getDefinition(response) {
@@ -31,6 +29,10 @@ function Search() {
 
   function searchWord(event) {
     event.preventDefault();
+    callApi()
+  }
+
+  function callApi() {
     let apiURl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios(apiURl).then(getDefinition, onRejectedDefinition);
 
@@ -45,17 +47,17 @@ function Search() {
   }
 
   return (
-    <div className="Search">
+    <div className="Search" >
       <h1>What word do you want to look up?</h1>
       <form onSubmit={searchWord}>
         <div className="form-group">
           <div className="container">
             <div className="row">
               <div className="col-10">
-                <input className="form-control search-box rounded" type="search" placeholder="search for a word..." onChange={captureKeyword} />
+                <input className="form-control search-box rounded" type="search" placeholder="search for a word..." value={keyword} onChange={captureKeyword} />
               </div>
               <div className="col-2 p-0">
-                <button className="btn btn-branding shadow-sm" type="submit">Search </button>
+                <button className="btn btn-branding shadow-sm" type="submit">Search</button>
               </div>
             </div>
           </div>
@@ -65,6 +67,7 @@ function Search() {
       <Rejected rejected={rejected} />
     </div>
   )
+
 }
 
 export default Search;

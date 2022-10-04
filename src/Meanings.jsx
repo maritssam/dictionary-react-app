@@ -1,19 +1,15 @@
 import React from "react";
 import Synonyms from "./Synonyms";
 import Example from "./Example";
-
 import "./Meanings.css";
 
 
 function Meanings(props) {
-  console.log(props.meanings.synonyms.length)
   return (
     <div className="Meanings">
-
       <h3>{props.meanings.partOfSpeech}</h3>
       <hr />
       <section className="word-definition">
-
         <ol>
           {props.meanings.definitions.map((definition, index) => {
             return (
@@ -37,13 +33,10 @@ function Meanings(props) {
           } else {
             return null
           }
-
         })}
       </section>
-
     </div>
   )
-
 }
 
 export default Meanings;
