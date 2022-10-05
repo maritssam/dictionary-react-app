@@ -5,7 +5,14 @@ import "./Meanings.css";
 
 
 function Meanings(props) {
+
+  const getSynonym = (synonym) => {
+    console.log("the synonym from synonym is -> ", synonym);
+    props.passSynonymToResults(synonym);
+  }
+
   return (
+
     <div className="Meanings">
       <h3>{props.meanings.partOfSpeech}</h3>
       <hr />
@@ -27,7 +34,7 @@ function Meanings(props) {
           if (synonym) {
             return (
               <ul key={index}>
-                <li className="synonym"> <Synonyms synonyms={synonym} /></li>
+                <li className="synonym"> <Synonyms synonyms={synonym} passSynonymToMeanings={getSynonym} /></li>
               </ul>
             )
           } else {
