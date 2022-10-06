@@ -1,0 +1,14 @@
+.Synonyms button {
+  padding: 3px 10px;
+  border: solid 1px #cdd3ae;
+  background-color: white;
+  border-radius: 25px;
+  margin: 5px;
+  font-size: 13px;
+  color: #1b1b1b;
+  transition: 0.8 ease-in-out;
+}
+
+.Synonyms button:hover {
+  background-color: #f8f9ef;
+}

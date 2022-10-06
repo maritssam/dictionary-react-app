@@ -7,11 +7,6 @@ import "./Results.css";
 
 function Results(props) {
 
-  const getSynonymFromMeanings = (synonymFromMeanings) => {
-    console.log("the synonym from meanings is -> ", synonymFromMeanings);
-    props.doRelatedKeywordSearch(synonymFromMeanings);
-  }
-
   if (props.response) {
 
     let meaning = props.response.meanings;
@@ -34,20 +29,17 @@ function Results(props) {
         {meaning.map((meanings, index) => {
           return (
             <div key={index}>
-              <Meanings meanings={meanings} passSynonymToResults={getSynonymFromMeanings} />
+              <Meanings meanings={meanings} setRelatedKeyword={props.setRelatedKeyword} />
             </div>
-          )
+          );
         })
         }
 
         <Photos photo={props.photo} num={props.num} />
 
       </div>
-    )
-  } else {
-    return null
-  }
-
-}
+    );
+  };
+};
 
 export default Results;

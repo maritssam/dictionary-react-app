@@ -1,24 +1,26 @@
 import React from "react";
+import "./Synonyms.css";
 
 function Synonyms(props) {
 
-  const onSynonymClicked = (evt) => {
-    evt.preventDefault();
-    props.passSynonymToMeanings(props.synonyms);
+  // function to pass data to Search, parent component
+  function onSynonymClicked(event) {
+    event.preventDefault();
+    props.setRelatedKeyword(props.synonyms);
   }
 
   if (props.synonyms) {
     return (
-      <div className="Synonyms">
-        <a href="/" onClick={onSynonymClicked}>
-            {props.synonyms}
-        </a>
-      </div>
+      <span className="Synonyms">
+        <button href="/" onClick={onSynonymClicked} title={`Search for ${props.synonyms} definition`}>
+          {props.synonyms}
+        </button>
+      </span>
     )
   } else {
-    return null
+    return null;
   }
-}
+};
 
 
 export default Synonyms;

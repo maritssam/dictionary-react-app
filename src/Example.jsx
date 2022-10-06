@@ -9,7 +9,7 @@ function Example(props) {
       </div>
     )
   } else {
-    return null
+    return null;
   }
 
 }

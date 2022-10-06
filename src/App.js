@@ -20,15 +20,17 @@ function App() {
         </div>
         <Search />
         <footer>
+          This project was coded by Ilenia N. and is
           <a
             href="https://github.com/ilenia-n/dictionary-react-app"
             target="_blank"
             rel="noopener noreferrer"
+            title="Link to the project code on Ilenia's GitHub"
           >
             {" "}
-            Open-source code
+            open-sourced
           </a>{" "}
-          by Ilenia
+          on GitHub
         </footer>
       </div>
     </div>

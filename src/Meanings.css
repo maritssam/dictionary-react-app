@@ -2,44 +2,29 @@
   padding: 0 20px 0px 20px;
 }
 
-.Meanings h3{
-  color: #cdd3ae ;
+.Meanings h3 {
+  color: #cdd3ae;
   font-weight: bold;
   font-size: 23px;
   margin-top: 30px;
   padding: 20px 20px 0 20px;
 }
 
-.Meanings hr{
+.Meanings hr {
   border: solid 1px #cdd3ae;
   margin: 0px;
 }
 
-.Meanings li{
+.Meanings li {
   margin: 15px 0 0 0;
 }
 
-.Meanings ol{
+.Meanings ol {
   margin-bottom: 40px;
 }
 
-.Meanings ul{
-  list-style-type: none;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-.Meanings li.synonym{
-  padding: 3px 10px;
-  border: solid 1px #cdd3ae;
-  border-radius: 25px;
-  margin: 5px;
-  font-size: 13px;
-}
-
-.Meanings .similar-text{
+.Meanings .similar-text {
   margin-right: 10px;
   font-weight: 600;
-  color: #cdd3ae ;
+  color: #cdd3ae;
 }

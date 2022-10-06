@@ -14,6 +14,6 @@ function Rejected(props) {
   } else {
     return null
   }
-}
+};
 
 export default Rejected;

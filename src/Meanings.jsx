@@ -6,17 +6,11 @@ import "./Meanings.css";
 
 function Meanings(props) {
 
-  const getSynonym = (synonym) => {
-    console.log("the synonym from synonym is -> ", synonym);
-    props.passSynonymToResults(synonym);
-  }
-
   return (
-
     <div className="Meanings">
       <h3>{props.meanings.partOfSpeech}</h3>
       <hr />
-      <section className="word-definition">
+      <div className="word-definition">
         <ol>
           {props.meanings.definitions.map((definition, index) => {
             return (
@@ -28,22 +22,22 @@ function Meanings(props) {
           })}
         </ol>
 
-        {props.meanings.synonyms.length > 0 ? <span className="similar-text">Similar:</span> : null}
+        {props.meanings.synonyms.length > 0 && <span className="similar-text">Similar:</span>}
 
         {props.meanings.synonyms.map((synonym, index) => {
           if (synonym) {
             return (
-              <ul key={index}>
-                <li className="synonym"> <Synonyms synonyms={synonym} passSynonymToMeanings={getSynonym} /></li>
-              </ul>
+              <span key={index}>
+                <Synonyms synonyms={synonym} setRelatedKeyword={props.setRelatedKeyword} />
+              </span>
             )
           } else {
             return null
           }
         })}
-      </section>
+      </div>
     </div>
   )
-}
+};
 
 export default Meanings;

@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./Phonetics.css";
 
 function Phonetics(props) {
-  let [audio, setAudio] = useState(false);
 
   function handleAudio(event) {
     event.preventDefault();
-    setAudio(true);
-    audio = new Audio(props.phonetics.audio);
+    let audio = new Audio(props.phonetics.audio);
     audio.play()
   }
 
@@ -27,9 +25,9 @@ function Phonetics(props) {
       </span>
     )
   } else {
-    return null
+    return null;
   }
-}
+};
 
 
 export default Phonetics;
