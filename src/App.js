@@ -20,9 +20,9 @@ function App() {
         </div>
         <Search />
         <footer>
-          This project was coded by Ilenia Natoli and is
+          This project was coded by Marti Med and is
           <a
-            href="https://github.com/ilenia-n/dictionary-react-app"
+            href="https://github.com/maritssam/dictionary-react-app/edit/main/src/App.js"
             target="_blank"
             rel="noopener noreferrer"
             title="Link to the project code on Ilenia's GitHub"
